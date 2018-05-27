@@ -10,18 +10,27 @@ const Sidebar = props => (
       flex: 1,
       maxWidth: 70,
       backgroundColor: "#ffb236",
-      height: "100vh"
+      height: "100vh",
+      alignItems: "center"
     }}
   >
-    <div style={SidebarStyles.avatar}>
-      <Avatar style={{ width: 60, height: 60, backgroundColor: "transparent" }}>
-        we
-      </Avatar>
+    <div style={{ borderBottom: "1px solid white" }}>
+      <Avatar style={{ backgroundColor: "transparent" }}>we</Avatar>
     </div>
-    <Avatar
-      style={[SidebarStyles.avatar, SidebarStyles.bgTrans]}
-      src="https://material-ui-next.com/static/images/remy.jpg"
-    />
+    <div
+      style={{
+        borderBottom: "1px solid white",
+        paddingTop: 10,
+        paddingBottom: 10
+      }}
+    >
+      <Avatar
+        style={{
+          backgroundColor: "transparent"
+        }}
+        src="https://material-ui-next.com/static/images/remy.jpg"
+      />
+    </div>
   </div>
 );
 
