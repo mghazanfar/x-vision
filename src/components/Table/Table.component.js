@@ -11,12 +11,12 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
+import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import FirstPageIcon from "@material-ui/icons/FirstPage";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import LastPageIcon from "@material-ui/icons/LastPage";
-import Icon from "@material-ui/core/Icon";
 import Save from "@material-ui/icons/Save";
 
 const actionsStyles = theme => ({
@@ -107,9 +107,9 @@ const TablePaginationActionsWrapped = withStyles(actionsStyles, {
 })(TablePaginationActions);
 
 let counter = 0;
-function createData(name, calories, fat) {
+function createData(src, name, business, location, office, email, phone) {
   counter += 1;
-  return { id: counter, name, calories, fat };
+  return { id: counter, src, name, business, location, office, email, phone };
 }
 
 const styles = theme => ({
@@ -131,19 +131,114 @@ class CustomPaginationActionsTable extends React.Component {
 
     this.state = {
       data: [
-        createData("Cupcake", 305, 3.7),
-        createData("Donut", 452, 25.0),
-        createData("Eclair", 262, 16.0),
-        createData("Frozen yoghurt", 159, 6.0),
-        createData("Gingerbread", 356, 16.0),
-        createData("Honeycomb", 408, 3.2),
-        createData("Ice cream sandwich", 237, 9.0),
-        createData("Jelly Bean", 375, 0.0),
-        createData("KitKat", 518, 26.0),
-        createData("Lollipop", 392, 0.2),
-        createData("Marshmallow", 318, 0),
-        createData("Nougat", 360, 19.0),
-        createData("Oreo", 437, 18.0)
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        ),
+        createData(
+          "https://material-ui-next.com/static/images/remy.jpg",
+          "Valentino Cyprusca",
+          "VisionX Technologies .inc",
+          "Irving Park, NY",
+          3122,
+          "Vencyp@gmail.com",
+          "+123-091234-0912"
+        )
       ].sort((a, b) => (a.calories < b.calories ? -1 : 1)),
       page: 0,
       rowsPerPage: 5
@@ -216,11 +311,25 @@ class CustomPaginationActionsTable extends React.Component {
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell numeric>Calories</TableCell>
-                <TableCell numeric>Fat (g)</TableCell>
-                <TableCell numeric>Carbs (g)</TableCell>
-                <TableCell numeric>Protein (g)</TableCell>
+                <TableCell />
+                <TableCell>
+                  <Typography variant="title">Member</Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography variant="title">Business</Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography variant="title">Location</Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography variant="title">Office</Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography variant="title">Email</Typography>
+                </TableCell>
+                <TableCell numeric>
+                  <Typography variant="title">Phone</Typography>
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -230,10 +339,27 @@ class CustomPaginationActionsTable extends React.Component {
                   return (
                     <TableRow key={n.id}>
                       <TableCell component="th" scope="row">
-                        {n.name}
+                        <Avatar
+                          style={{
+                            backgroundColor: "transparent"
+                          }}
+                          src={n.src}
+                        />
                       </TableCell>
-                      <TableCell numeric>{n.calories}</TableCell>
-                      <TableCell numeric>{n.fat}</TableCell>
+                      <TableCell numeric>
+                        <a href="#">{n.name}</a>
+                      </TableCell>
+                      <TableCell numeric>
+                        <a href="#">{n.business}</a>
+                      </TableCell>
+                      <TableCell numeric>
+                        <a href="#">{n.location}</a>
+                      </TableCell>
+                      <TableCell numeric>{n.office}</TableCell>
+                      <TableCell numeric>
+                        <a href="#">{n.email}</a>
+                      </TableCell>
+                      <TableCell numeric>{n.phone}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -246,7 +372,7 @@ class CustomPaginationActionsTable extends React.Component {
             <TableFooter>
               <TableRow>
                 <TablePagination
-                  colSpan={3}
+                  colSpan={12}
                   count={data.length}
                   rowsPerPage={rowsPerPage}
                   page={page}

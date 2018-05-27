@@ -1,5 +1,4 @@
 import React from "react";
-import { SidebarStyles } from "./Sidebar.style";
 import Avatar from "@material-ui/core/Avatar";
 
 const Sidebar = props => (
@@ -15,7 +14,20 @@ const Sidebar = props => (
     }}
   >
     <div style={{ borderBottom: "1px solid white" }}>
-      <Avatar style={{ backgroundColor: "transparent" }}>we</Avatar>
+      <Avatar
+        style={{
+          backgroundColor: "transparent",
+          border: "1px solid black",
+          color: "black",
+          marginBottom: 10,
+          marginTop: 10,
+          width: 30,
+          height: 30,
+          fontSize: 12
+        }}
+      >
+        we
+      </Avatar>
     </div>
     <div
       style={{
