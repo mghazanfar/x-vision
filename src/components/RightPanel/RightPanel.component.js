@@ -3,36 +3,16 @@ import Table from "../Table";
 import BGBlue from "./BGBlue.component";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+import Styles from "../../styles";
 
 const RightPanel = () => {
   return (
     <React.Fragment>
-      <div style={{ display: "flex", flex: 1, position: "relative" }}>
+      <div style={Styles.rightPanelWrapper}>
         <BGBlue />
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flex: 1,
-            position: "absolute",
-            height: " 100vh",
-            width: "100%",
-            flexDirection: "column"
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "space-between",
-              margin: 10,
-              marginRight: 16
-            }}
-          >
-            <Typography
-              variant="title"
-              style={{ color: "white", marginTop: "1rem", marginLeft: "1rem" }}
-            >
+        <div style={Styles.rightAbsolute}>
+          <div style={Styles.rightBetween}>
+            <Typography variant="title" style={Styles.textMember}>
               Members
             </Typography>
 
