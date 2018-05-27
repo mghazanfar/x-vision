@@ -27,6 +27,10 @@ export const Styles = {
     paddingTop: 10,
     paddingBottom: 10
   },
+  icon: {
+    marginTop: 10,
+    marginBottom: 10
+  },
   bgTransparent: {
     backgroundColor: "transparent"
   },
@@ -47,5 +51,8 @@ export const Styles = {
     margin: 10,
     marginRight: 16
   },
-  textMember: { color: "white", marginTop: "1rem", marginLeft: "1rem" }
+  textMember: { color: "white", marginTop: "1rem", marginLeft: "1rem" },
+  textWhite: {
+    color: "white"
+  }
 };

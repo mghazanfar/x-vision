@@ -327,7 +327,7 @@ class CustomPaginationActionsTable extends React.Component {
                 <TableCell>
                   <Typography variant="title">Email</Typography>
                 </TableCell>
-                <TableCell numeric>
+                <TableCell>
                   <Typography variant="title">Phone</Typography>
                 </TableCell>
               </TableRow>

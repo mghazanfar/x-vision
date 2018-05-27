@@ -23,7 +23,7 @@ const RightPanel = () => {
               margin="none"
             />
           </div>
-          <div style={{ width: 1200 }}>
+          <div style={{ minWidth: 1200 }}>
             <Table />
           </div>
         </div>
